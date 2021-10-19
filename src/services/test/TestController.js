@@ -9,22 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var WebDecorators_1 = require("spangle-ts/dist/web/WebDecorators");
-var TestController = /** @class */ (function () {
-    function TestController() {
-    }
-    TestController.prototype.greet = function (req, res) {
+const WebDecorators_1 = require("spangle-ts/dist/web/WebDecorators");
+let TestController = class TestController {
+    greet(req, res) {
         res.send('hello there..');
-    };
-    __decorate([
-        (0, WebDecorators_1.Get)('/greeting'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object, Object]),
-        __metadata("design:returntype", void 0)
-    ], TestController.prototype, "greet", null);
-    TestController = __decorate([
-        (0, WebDecorators_1.Controller)('/test')
-    ], TestController);
-    return TestController;
-}());
+    }
+};
+__decorate([
+    (0, WebDecorators_1.Get)('/greeting'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], TestController.prototype, "greet", null);
+TestController = __decorate([
+    (0, WebDecorators_1.Controller)('/test')
+], TestController);
 exports.default = new TestController();

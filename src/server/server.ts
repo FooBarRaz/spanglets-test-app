@@ -1,4 +1,4 @@
-import express = require("express");
+import express from 'express'
 import { createRouteForControllers } from "spangle-ts/dist/web/WebDecorators";
 import TestController from "../services/test/TestController";
 
